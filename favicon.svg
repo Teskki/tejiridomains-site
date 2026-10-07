@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tejiri Domains">
+  <rect width="64" height="64" rx="14" fill="#1f5c4a"/>
+  <path d="M15 15h30v8H34.5v26h-9V23H15z" fill="#f7f5f0"/>
+  <circle cx="45" cy="44.5" r="5" fill="#7cc4a8"/>
+</svg>

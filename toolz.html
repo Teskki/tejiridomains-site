@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolz — Tejiri Domains</title>
+<meta name="description" content="Tools built by Tejiri Domains for domain investors. Request access to Tejiri Outreach, a careful one-to-one email outreach tool.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1f5c4a">
+<meta property="og:title" content="Toolz by Tejiri Domains">
+<meta property="og:description" content="Exact-match domain names for healthcare practices and growing businesses.">
+<meta property="og:image" content="https://tejiridomains.com/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1b1d1f;
+    --muted: #5d6166;
+    --line: #e2ded5;
+    --accent: #1f5c4a;
+    --accent-soft: #e5efe9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141615;
+      --surface: #1c1f1e;
+      --ink: #eceae4;
+      --muted: #a3a8a4;
+      --line: #2e3331;
+      --accent: #7cc4a8;
+      --accent-soft: #1f2e28;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .brand { font: 600 20px/1 "Fraunces", Georgia, serif; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 10px; }
+  .brand svg { width: 32px; height: 32px; flex: none; }
+  .brand span { color: var(--accent); }
+  nav a { color: var(--muted); text-decoration: none; font-size: 15px; margin-left: 20px; }
+  nav a:hover { color: var(--ink); }
+
+  .hero { padding-top: 72px; padding-bottom: 56px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+  h1 { font: 600 clamp(34px, 6vw, 52px)/1.1 "Fraunces", Georgia, serif; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 16ch; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 58ch; margin: 0; }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font: 600 26px/1.2 "Fraunces", Georgia, serif; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .card .name { font: 600 21px/1.25 "Fraunces", Georgia, serif; word-break: break-word; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .price { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; }
+  .price strong { font-size: 22px; font-weight: 600; }
+  .price small { color: var(--muted); font-size: 14px; }
+  .btn {
+    display: inline-block; margin-top: 8px; align-self: flex-start;
+    background: var(--accent); color: var(--surface);
+    padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none;
+  }
+  .btn:hover { opacity: 0.9; }
+  .more { margin-top: 20px; font-size: 15px; }
+
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+  .steps li::before {
+    content: counter(s); width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 15px;
+    display: grid; place-items: center;
+  }
+  .steps b { display: block; font-weight: 600; }
+  .steps span { color: var(--muted); font-size: 15px; }
+
+  .about p { max-width: 62ch; margin: 0 0 14px; }
+
+  .contact { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .contact dt { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .contact dd { margin: 0; }
+  address { font-style: normal; }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 560px) {
+    nav a.anchor { display: none; }
+    nav a { margin-left: 0; }
+    .hero { padding-top: 48px; padding-bottom: 40px; }
+    .lead { font-size: 17px; }
+  }
+
+  .tool { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; display: grid; gap: 18px; }
+  .tool-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; justify-content: space-between; }
+  .tool h3 { font: 600 24px/1.2 "Fraunces", Georgia, serif; margin: 0; }
+  .pill { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 4px 10px; border-radius: 999px; }
+  .tool p { margin: 0; color: var(--muted); }
+  .cols { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .cols h4 { margin: 0 0 8px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .cols ul { margin: 0; padding-left: 18px; }
+  .cols li { margin: 4px 0; font-size: 15px; }
+  code { font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--accent-soft); padding: 1px 6px; border-radius: 4px; }
+
+  form { display: grid; gap: 18px; max-width: 640px; }
+  .field { display: grid; gap: 6px; }
+  label { font-weight: 600; font-size: 15px; }
+  .hint { font-size: 13px; color: var(--muted); font-weight: 400; }
+  input[type=text], input[type=email], select, textarea {
+    font: inherit; font-size: 16px; color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%;
+  }
+  textarea { min-height: 110px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+  .check { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; font-weight: 400; font-size: 15px; }
+  .check input { width: 18px; height: 18px; margin-top: 3px; accent-color: var(--accent); }
+  button { font: 600 16px "Inter", system-ui, sans-serif; background: var(--accent); color: var(--surface); border: 0; border-radius: 8px; padding: 12px 22px; cursor: pointer; justify-self: start; }
+  button:hover { opacity: .9; }
+  button[disabled] { opacity: .6; cursor: wait; }
+  .hp { position: absolute; left: -9999px; }
+  .notice { border-radius: 10px; padding: 16px 18px; font-size: 15px; display: none; }
+  .notice.ok { display: block; background: var(--accent-soft); color: var(--ink); }
+  .notice.err { display: block; background: #fdecea; color: #7a1c13; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Tejiri Domains home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f5c4a"/><path d="M15 15h30v8H34.5v26h-9V23H15z" fill="#f7f5f0"/><circle cx="45" cy="44.5" r="5" fill="#7cc4a8"/></svg>
+      <span style="color:var(--ink)">Tejiri <span>Domains</span></span>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a class="anchor" href="#outreach">Tejiri Outreach</a>
+      <a class="anchor" href="#request">Request access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow">Toolz</p>
+    <h1>The tools behind Tejiri Domains.</h1>
+    <p class="lead">Small, practical tools I built for my own domain investing. They're free while in early access. Request access below and I'll review each request personally.</p>
+  </div>
+
+  <section id="outreach">
+    <div class="wrap">
+      <h2>Available tools</h2>
+      <p class="sub">Access is granted through a private GitHub repository, so you'll need a free GitHub account.</p>
+      <article class="tool">
+        <div class="tool-head">
+          <h3>Tejiri Outreach</h3>
+          <span class="pill">Early access</span>
+        </div>
+        <p>A command-line tool for selling a domain through careful, one-to-one email. It works from a buyer list you've researched, finds each business's published contact email, checks it, picks the best contact, and sends a short personalized sequence from your own mailbox. When someone replies or asks to stop, it stops.</p>
+        <div class="cols">
+          <div>
+            <h4>What it does</h4>
+            <ul>
+              <li><b>Extract:</b> published emails from each prospect's own website</li>
+              <li><b>Verify:</b> syntax and mail servers; flags generic and free-mail addresses</li>
+              <li><b>Sort:</b> keeps the best contact per business</li>
+              <li><b>Send:</b> a 6-step sequence with same-thread follow-ups</li>
+              <li><b>Inbox:</b> reads replies, opt-outs and bounces automatically</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Built-in limits</h4>
+            <ul>
+              <li>At most 40 emails a day per inbox (15 by default)</li>
+              <li>Minutes between emails, business hours only</li>
+              <li>No first email without a personal line you write</li>
+              <li>Postal address and opt-out line in every email</li>
+              <li>A permanent do-not-contact list</li>
+            </ul>
+          </div>
+          <div>
+            <h4>You'll need</h4>
+            <ul>
+              <li>Python 3.11 or newer</li>
+              <li>Your own email account with SMTP and IMAP access</li>
+              <li>A researched list of businesses (CSV or Google Sheet export)</li>
+              <li>A free GitHub account</li>
+            </ul>
+          </div>
+        </div>
+        <p>It's not built for bulk email, purchased lists or scraping the web, and it won't do those things.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap">
+      <h2>Request access</h2>
+      <p class="sub">I reply to every request, usually within two business days. If approved, GitHub emails you an invitation to the private repository.</p>
+
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+
+      <form id="access-form" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="github">GitHub username <span class="hint">(the invitation goes to this account)</span></label>
+          <input type="text" id="github" name="github" required pattern="[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})" autocapitalize="off" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="use">What will you use it for? <span class="hint">(what you're selling and who you'll contact)</span></label>
+          <textarea id="use" name="use" required></textarea>
+        </div>
+        <div class="field">
+          <label for="volume">Emails per day you expect to send</label>
+          <select id="volume" name="volume" required>
+            <option value="">Choose one</option>
+            <option>Under 15</option>
+            <option>15 to 40</option>
+          </select>
+        </div>
+        <label class="check"><input type="checkbox" name="agree_list" required><span>I'll only email businesses I've researched, never bought or scraped lists, and I'll honor every request to stop.</span></label>
+        <label class="check"><input type="checkbox" name="agree_law" required><span>I'll include my real name, postal address and an opt-out in every email, as anti-spam laws such as CAN-SPAM require.</span></label>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" id="submit">Request access</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Tejiri Domains · <a href="/">Home</a> · <a href="mailto:tejiri@tejiridomains.com">tejiri@tejiridomains.com</a></div>
+</footer>
+
+<script>
+  // Paste your Formspree endpoint here (e.g. "https://formspree.io/f/abcdwxyz").
+  // Left empty, the form opens a pre-filled email to you instead.
+  const FORM_ENDPOINT = "";
+  const TO = "tejiri@tejiridomains.com";
+
+  const form = document.getElementById("access-form");
+  const notice = document.getElementById("notice");
+  const btn = document.getElementById("submit");
+
+  function show(kind, text) { notice.className = "notice " + kind; notice.textContent = text; notice.scrollIntoView({behavior: "smooth", block: "center"}); }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const d = Object.fromEntries(new FormData(form));
+    if (d._gotcha) return;
+    if (!FORM_ENDPOINT) {
+      const body = `Name: ${d.name}\nEmail: ${d.email}\nGitHub: ${d.github}\nEmails per day: ${d.volume}\n\nUse:\n${d.use}\n\nAgreed: researched lists only, honor opt-outs, CAN-SPAM details in every email.`;
+      location.href = `mailto:${TO}?subject=${encodeURIComponent("Toolz access request: Tejiri Outreach")}&body=${encodeURIComponent(body)}`;
+      show("ok", "Your email app should open with the request filled in. Press send there to finish.");
+      return;
+    }
+    btn.disabled = true;
+    try {
+      const r = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({ ...d, _subject: "Toolz access request: Tejiri Outreach" }) });
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      show("ok", "Thanks. Your request is in, and I'll reply by email within two business days.");
+    } catch (err) {
+      show("err", `That didn't go through. Please email ${TO} instead.`);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
