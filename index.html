@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tejiri Domains — Exact-match domain names</title>
+<meta name="description" content="Tejiri Domains buys and sells exact-match domain names for healthcare practices and growing businesses. Every sale is completed through secure marketplace checkout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --ink: #1b1d1f;
+    --muted: #5d6166;
+    --line: #e2ded5;
+    --accent: #1f5c4a;
+    --accent-soft: #e5efe9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141615;
+      --surface: #1c1f1e;
+      --ink: #eceae4;
+      --muted: #a3a8a4;
+      --line: #2e3331;
+      --accent: #7cc4a8;
+      --accent-soft: #1f2e28;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .brand { font: 600 20px/1 "Fraunces", Georgia, serif; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  nav a { color: var(--muted); text-decoration: none; font-size: 15px; margin-left: 20px; }
+  nav a:hover { color: var(--ink); }
+
+  .hero { padding-top: 72px; padding-bottom: 56px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 16px; }
+  h1 { font: 600 clamp(34px, 6vw, 52px)/1.1 "Fraunces", Georgia, serif; letter-spacing: -0.02em; margin: 0 0 20px; max-width: 16ch; }
+  .lead { font-size: 19px; color: var(--muted); max-width: 58ch; margin: 0; }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font: 600 26px/1.2 "Fraunces", Georgia, serif; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .card .name { font: 600 21px/1.25 "Fraunces", Georgia, serif; word-break: break-word; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .price { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; }
+  .price strong { font-size: 22px; font-weight: 600; }
+  .price small { color: var(--muted); font-size: 14px; }
+  .btn {
+    display: inline-block; margin-top: 8px; align-self: flex-start;
+    background: var(--accent); color: var(--surface);
+    padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none;
+  }
+  .btn:hover { opacity: 0.9; }
+  .more { margin-top: 20px; font-size: 15px; }
+
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; counter-reset: s; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; }
+  .steps li::before {
+    content: counter(s); width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 15px;
+    display: grid; place-items: center;
+  }
+  .steps b { display: block; font-weight: 600; }
+  .steps span { color: var(--muted); font-size: 15px; }
+
+  .about p { max-width: 62ch; margin: 0 0 14px; }
+
+  .contact { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .contact dt { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .contact dd { margin: 0; }
+  address { font-style: normal; }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 560px) {
+    nav { display: none; }
+    .hero { padding-top: 48px; padding-bottom: 40px; }
+    .lead { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">Tejiri <span>Domains</span></a>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#how">How buying works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow">Domain names for healthcare &amp; growing businesses</p>
+    <h1>The right address for your practice.</h1>
+    <p class="lead">I'm Tejiri, an independent domain investor. I buy and sell exact-match .com names built around a location and a specialty, so patients and customers can find you and remember where you are.</p>
+  </div>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <h2>Available domains</h2>
+      <p class="sub">Each name opens to its sale page, with Buy Now, Make Offer and monthly payment options.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="name">EdinaPainClinic.com</div>
+          <p>The exact-match domain for pain management care in Edina, Minnesota. Ideal for a pain clinic, spine practice or new location.</p>
+          <div class="price"><strong>$1,488</strong><small>or 12 monthly payments</small></div>
+          <a class="btn" href="https://edinapainclinic.com" rel="noopener">View sale page</a>
+        </article>
+
+        <article class="card">
+          <div class="name">DentalDayton.com</div>
+          <p>A short, memorable domain for a dental practice serving Dayton, Ohio. Ideal for a family, cosmetic or implant practice.</p>
+          <div class="price"><strong>$1,288</strong><small>or 12 monthly payments</small></div>
+          <a class="btn" href="https://dentaldayton.com" rel="noopener">View sale page</a>
+        </article>
+      </div>
+
+      <p class="more">See the full portfolio on <a href="https://www.spaceship.com/sellerhub/portfolio/tejiridomains" rel="noopener">Spaceship SellerHub</a>.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How buying works</h2>
+      <p class="sub">Every sale goes through Spaceship's marketplace checkout. You never send money to me directly.</p>
+      <ol class="steps">
+        <li><div><b>Choose how to pay</b><span>Buy now at the listed price, make an offer, or pay monthly with lease-to-own.</span></div></li>
+        <li><div><b>Pay through secure checkout</b><span>Spaceship handles the payment and holds it until the transfer is complete.</span></div></li>
+        <li><div><b>Receive the domain</b><span>The name is moved to your account, and you can point it at your website straight away.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>Tejiri Domains is a small, independent portfolio run by me, Tejiri. I research each name before buying it: who could use it, how people search for it, and whether it's free of trademark conflicts.</p>
+      <p>If you're interested in a name, or you're looking for a domain for your own practice, email me. I reply to every message personally.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="sub">Questions about a domain or a sale? I usually reply within one business day.</p>
+      <dl class="contact">
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:tejiri@tejiridomains.com">tejiri@tejiridomains.com</a></dd>
+        </div>
+        <div>
+          <dt>Phone</dt>
+          <dd><a href="tel:+12154167749">+1 (215) 416-7749</a></dd>
+        </div>
+        <div>
+          <dt>Location</dt>
+          <dd><address>Phoenix, AZ</address></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Tejiri Domains. Domain sales are processed by Spaceship SellerHub.</div>
+</footer>
+
+</body>
+</html>
