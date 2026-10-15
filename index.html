@@ -105,9 +105,26 @@
 
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
 
+  .menu-btn { display: none; }
   @media (max-width: 560px) {
-    nav a.anchor { display: none; }
-    nav a { margin-left: 0; }
+    header { position: relative; padding: 20px 0; }
+    .menu-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font: 500 15px "Inter", system-ui, sans-serif; color: var(--ink);
+      background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+      padding: 8px 12px; cursor: pointer;
+    }
+    .menu-btn svg { width: 18px; height: 18px; }
+    .menu-btn .i-close { display: none; }
+    .menu-btn[aria-expanded="true"] .i-open { display: none; }
+    .menu-btn[aria-expanded="true"] .i-close { display: block; }
+    nav {
+      display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 10;
+      background: var(--bg); border-bottom: 1px solid var(--line);
+      box-shadow: 0 8px 16px rgba(0,0,0,.06);
+    }
+    nav.open { display: block; }
+    nav a { display: block; margin: 0; padding: 14px 24px; font-size: 17px; color: var(--ink); border-top: 1px solid var(--line); }
     .hero { padding-top: 48px; padding-bottom: 40px; }
     .lead { font-size: 17px; }
   }
@@ -121,10 +138,15 @@
       <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1f5c4a"/><path d="M15 15h30v8H34.5v26h-9V23H15z" fill="#f7f5f0"/><circle cx="45" cy="44.5" r="5" fill="#7cc4a8"/></svg>
       <span style="color:var(--ink)">Tejiri <span>Domains</span></span>
     </a>
-    <nav>
-      <a class="anchor" href="#portfolio">Portfolio</a>
-      <a class="anchor" href="#how">How buying works</a>
-      <a class="anchor" href="#contact">Contact</a>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false">
+      <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      Menu
+    </button>
+    <nav id="site-nav" aria-label="Main">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#how">How buying works</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -207,5 +229,15 @@
   <div class="wrap">© 2026 Tejiri Domains. Domain sales are processed by Spaceship SellerHub.</div>
 </footer>
 
+<script>
+  (function () {
+    var btn = document.querySelector(".menu-btn"), nav = document.getElementById("site-nav");
+    function set(open) { nav.classList.toggle("open", open); btn.setAttribute("aria-expanded", open); }
+    btn.addEventListener("click", function () { set(btn.getAttribute("aria-expanded") !== "true"); });
+    nav.addEventListener("click", function (e) { if (e.target.tagName === "A") set(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+    document.addEventListener("click", function (e) { if (!nav.contains(e.target) && !btn.contains(e.target)) set(false); });
+  })();
+</script>
 </body>
 </html>
